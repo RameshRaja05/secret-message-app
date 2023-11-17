@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <style>
+      .row {
+        margin-top: 25vh;
+      }
+      h1{
+        margin-top: 0;
+      }
+    </style>
+    <title>Secret-message-sharing-app</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col s8 offset-s2">
+        <div class="card-panel hide" id="message-show-card">
+          <h1></h1>
+          <a href="./index.html">Create your own secret message</a>
+        </div>
+        <div class="card-panel" id="message-form-card">
+          <form class="message-form">
+            <label for="message">Enter a secret message</label>
+            <input type="text" name="message" id="message" />
+            <button class="btn" id="create-message-btn">
+              create a secret message
+            </button>
+          </form>
+        </div>
+        <div class="card-panel hide" id="link-card">
+          <div>
+            Share this link with your friends
+            <input type="text" id="link-input" readonly />
+            <button id="copy-btn" class="btn">Copy URL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js" defer></script>
+  </body>
+</html>
